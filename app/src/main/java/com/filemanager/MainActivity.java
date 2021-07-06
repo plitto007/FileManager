@@ -3,12 +3,13 @@ package com.fileManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 启动页，线程睡眠 2 秒后跳到主页面
  */
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void run() {
                 SystemClock.sleep(2000);
-                startActivity(new Intent(MainActivity.this,FileActivity.class));
+                startActivity(new Intent(MainActivity.this, com.fileManager.FileActivity.class));
                 finish();
             }
         }).start();

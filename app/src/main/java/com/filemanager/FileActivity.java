@@ -7,12 +7,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StatFs;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -25,6 +19,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.fileManager.util.ACache;
@@ -42,11 +43,11 @@ import butterknife.ButterKnife;
 public class FileActivity extends AppCompatActivity implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
 
-    @BindView(R.id.free_number)
+//    @BindView(R.id.free_number)
     TextView mFreeView;
-    @BindView(R.id.total_number)
+//    @BindView(R.id.total_number)
     TextView mTotalView;
-    @BindView(R.id.file_refresh)
+//    @BindView(R.id.file_refresh)
     SwipeRefreshLayout mSwipeRefreshLayout;
 
     public static boolean isNight;
@@ -61,7 +62,10 @@ public class FileActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
+        mSwipeRefreshLayout = findViewById(R.id.file_refresh);
+        mTotalView=findViewById(R.id.total_number);
+        mFreeView=findViewById(R.id.free_number);
         initView();
     }
 
@@ -174,7 +178,7 @@ public class FileActivity extends AppCompatActivity implements View.OnClickListe
                                 if (FileName.equals("")) {
                                     Toast.makeText(FileActivity.this, "输入不能为空", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Intent intent = new Intent(FileActivity.this, ShowActivity.class);
+                                    Intent intent = new Intent(FileActivity.this, com.fileManager.ShowActivity.class);
                                     intent.putExtra("class", "filename");
                                     intent.putExtra("filename",FileName);
                                     startActivity(intent);
@@ -199,7 +203,7 @@ public class FileActivity extends AppCompatActivity implements View.OnClickListe
                                 if (FileType.equals("")) {
                                     Toast.makeText(FileActivity.this, "输入不能为空", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Intent intent = new Intent(FileActivity.this, ShowActivity.class);
+                                    Intent intent = new Intent(FileActivity.this, com.fileManager.ShowActivity.class);
                                     intent.putExtra("class", "filetype");
                                     intent.putExtra("filetype",FileType);
                                     startActivity(intent);
@@ -211,37 +215,37 @@ public class FileActivity extends AppCompatActivity implements View.OnClickListe
                 materialSheetFab.hideSheet();
                 break;
             case R.id.file_image:
-                intent.setClass(this, ShowActivity.class);
+                intent.setClass(this, com.fileManager.ShowActivity.class);
                 intent.putExtra("class", "image");
                 startActivity(intent);
                 break;
             case R.id.file_music:
-                intent.setClass(this, ShowActivity.class);
+                intent.setClass(this, com.fileManager.ShowActivity.class);
                 intent.putExtra("class", "music");
                 startActivity(intent);
                 break;
             case R.id.file_video:
-                intent.setClass(this, ShowActivity.class);
+                intent.setClass(this, com.fileManager.ShowActivity.class);
                 intent.putExtra("class", "video");
                 startActivity(intent);
                 break;
             case R.id.file_word:
-                intent.setClass(this, ShowActivity.class);
+                intent.setClass(this, com.fileManager.ShowActivity.class);
                 intent.putExtra("class", "word");
                 startActivity(intent);
                 break;
             case R.id.file_apk:
-                intent.setClass(this, ShowActivity.class);
+                intent.setClass(this, com.fileManager.ShowActivity.class);
                 intent.putExtra("class", "apk");
                 startActivity(intent);
                 break;
             case R.id.file_zip:
-                intent.setClass(this, ShowActivity.class);
+                intent.setClass(this, com.fileManager.ShowActivity.class);
                 intent.putExtra("class", "zip");
                 startActivity(intent);
                 break;
             case R.id.file_bottom:
-                intent.setClass(this, MemoryActivity.class);
+                intent.setClass(this, com.fileManager.MemoryActivity.class);
                 intent.putExtra("total", mToalS);
                 intent.putExtra("free", mFreeS);
                 startActivity(intent);
@@ -264,7 +268,7 @@ public class FileActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "已经是最新版本", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu_about:
-                startActivity(new Intent(FileActivity.this, AboutActivity.class));
+                startActivity(new Intent(FileActivity.this, com.fileManager.AboutActivity.class));
                 break;
             case R.id.menu_quit:
                 finish();

@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.utils.FileUtils;
 import com.blankj.utilcode.utils.TimeUtils;
@@ -96,7 +97,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.MyViewHolder
                     mOnItemClickLitener.onItemClick(holder.mLayout, pos);
                     final String items[] = {"重命名文件", "文件详情", "分享"};
                     
-                    AlertDialog.Builder builder = new AlertDialog.Builder(mContext);  //先得到构造器  
+                    AlertDialog.Builder builder = new AlertDialog.Builder(mContext);  //先得到构造器
                     builder.setItems(items, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

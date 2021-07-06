@@ -8,8 +8,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.utils.FileUtils;
 import com.blankj.utilcode.utils.TimeUtils;
@@ -98,7 +99,7 @@ public class ApkAdapter extends RecyclerView.Adapter<ApkAdapter.MyViewHolder> {
                 @Override
                 public boolean onLongClick(View v) {
                     final String items[] = {"重命名文件", "文件详情", "分享"};
-                    AlertDialog.Builder builder = new AlertDialog.Builder(mContext);  //先得到构造器  
+                    AlertDialog.Builder builder = new AlertDialog.Builder(mContext);  //先得到构造器
                     builder.setItems(items, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
