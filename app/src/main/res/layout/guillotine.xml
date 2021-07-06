@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="快客文件管理器"
+                android:text="Kuai Ke File Manager"
                 android:textColor="#388cff"
                 android:textSize="21sp"
                 android:textStyle="bold"/>
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="7dp"
-                android:text="更轻快，更简单"
+                android:text="Lighter and simpler"
                 android:textColor="#388cff"
                 android:layout_below="@+id/nav_title"
                 android:layout_centerHorizontal="true"
@@ -96,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="清除缓存"
+                android:text="clear cache"
                 android:textColor="#fff"
                 android:textSize="21sp"/>
         </LinearLayout>
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="检查更新"
+                android:text="Check for updates"
                 android:textColor="#fff"
                 android:textSize="21sp"/>
         </LinearLayout>
@@ -166,7 +166,7 @@ android:background="@color/colorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="关于快客"
+                android:text="About Kuai Ke"
                 android:textColor="#fff"
                 android:textSize="21sp"/>
         </LinearLayout>
@@ -200,7 +200,7 @@ android:background="@color/colorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="退出程序"
+                android:text="exit the program"
                 android:textColor="#fff"
                 android:textSize="21sp"/>
         </LinearLayout>
@@ -213,7 +213,7 @@ android:background="@color/colorPrimary"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center_vertical"
-        android:text="设置"
+        android:text="Set up"
         android:textColor="#fff"
         android:textSize="21sp"
         android:layout_alignBottom="@+id/toolbar"

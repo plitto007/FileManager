@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
-                android:text="设备信息"
+                android:text="Device Information"
                 android:textColor="@color/textColor2"
                 android:textSize="21sp"/>
         </androidx.appcompat.widget.Toolbar>
@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="设备参数："
+            android:text="Device parameters："
             android:textColor="@color/textColor"
             android:textSize="21sp"/>
 
@@ -59,7 +59,7 @@
 
             <TextView
                 style="@style/DetialStyle"
-                android:text="设备型号："
+                android:text="Device model："
                 />
 
             <TextView
@@ -79,7 +79,7 @@
 
             <TextView
                 style="@style/DetialStyle"
-                android:text="生产厂商："
+                android:text="manufacturer："
                 />
 
             <TextView
@@ -99,7 +99,7 @@
 
             <TextView
                 style="@style/DetialStyle"
-                android:text="Root状态："
+                android:text="Root status："
                 />
 
             <TextView
@@ -119,7 +119,7 @@
 
             <TextView
                 style="@style/DetialStyle"
-                android:text="设备IMEI："
+                android:text="Equipment IMEI："
                 />
 
             <TextView
@@ -139,7 +139,7 @@
 
             <TextView
                 style="@style/DetialStyle"
-                android:text="Android版本："
+                android:text="Android version："
                 />
 
             <TextView
@@ -159,7 +159,7 @@
 
             <TextView
                 style="@style/DetialStyle"
-                android:text="设备总存储："
+                android:text="Total storage of equipment："
                 />
 
             <TextView
@@ -184,7 +184,7 @@
 
             <TextView
                 style="@style/DetialStyle"
-                android:text="设备剩余存储："
+                android:text="Equipment remaining storage："
                 />
 
             <TextView
